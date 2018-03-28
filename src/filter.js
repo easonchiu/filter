@@ -45,7 +45,7 @@ function filter(target, rule) {
 			
 			// 如果规则是个function
 			if (_isFn) {
-				_res[_k] = _r.call(o)
+				_res[_k] = _r.call(null, o[_k])
 			}
 			// 如果filter需要显示但返回数据中没有，填入
 			else if (_r === 1 && _res[_k] === undefined) {
